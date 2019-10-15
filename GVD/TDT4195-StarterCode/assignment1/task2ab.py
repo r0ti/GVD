@@ -12,20 +12,22 @@ def save_im(imname, im, cmap=None):
 
 def greyscale(im):
     """ Converts an RGB image to greyscale
-    
+
     Args:
         im ([type]): [np.array of shape [H, W, 3]]
-    
+
     Returns:
         im ([type]): [np.array of shape [H, W]]
     """
-    # YOUR CODE HERE
+   # YOUR CODE HERE
 
     r, g, b = im[:, :, 0], im[:, :, 1], im[:, :, 2]
 
     im = r*0.212 + g*0.7152 + b*0.0722
 
     return im
+
+
 
 
 def inverse(im):
@@ -38,7 +40,11 @@ def inverse(im):
         im ([type]): [np.array of shape [H, W]]
     """    
      # YOUR CODE HERE
+
+    im = 255 - im
+
     return im
+
 
 
 if __name__ == "__main__":
@@ -47,3 +53,5 @@ if __name__ == "__main__":
     inverse_im = inverse(im)
     save_im("lake_greyscale.jpg", im, cmap="gray")
     save_im("lake_inverse.jpg", inverse_im, cmap="gray")
+
+

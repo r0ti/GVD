@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 from task2ab import save_im
 
 
+def conv_trans(image):
+    copy = image.copy()
+    for i in range(image.shape[0]):
+        for j in range(image.shape[1]):
+            copy[i][j] = image[image.shape[0] - i - 1][image.shape[1] - j - 1]
+    return copy
+
+
 def convolve_im(im, kernel):
     """ A function that convolves im with kernel
     
@@ -15,7 +23,28 @@ def convolve_im(im, kernel):
         [type]: [np.array of shape [H, W, 3]. should be same as im]
     """
     # YOUR CODE HERE
-    return im
+
+    kernel = conv_trans(kernel)
+    iH = im.shape[0]
+    iW = im.shape[1]
+
+    kH = kernel.shape[0]
+    kW = kernel.shape[1]
+
+    h = kH // 2
+    w = kW // 2
+
+    newIm = np.zeros(im.shape)
+
+    for i in range(h, iH - h):
+        for j in range(w, iW - w):
+            sum = 0
+            for m in range(kH):
+                for n in range(kW):
+                    sum = sum + kernel[m][n] * im[i - h + m][j - w + n]
+            newIm[i][j] = sum
+
+    return newIm.astype(np.uint8)
 
 
 if __name__ == "__main__":
