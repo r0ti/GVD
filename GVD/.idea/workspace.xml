@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="403c2745-0485-4be8-93d6-a0db67237325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TDT4195-StarterCode/assignment1/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2ab.py" beforeDir="false" afterPath="$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2ab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2c.py" beforeDir="false" afterPath="$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2c.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +15,19 @@
     <SUITE FILE_PATH="coverage/GVD$task2ab.coverage" NAME="task2ab Coverage Results" MODIFIED="1571136454568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TDT4195-StarterCode/assignment1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2c.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/TDT4195-StarterCode" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -48,6 +60,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -55,15 +68,26 @@
               <item name="GVD" type="b2602c69:ProjectViewProjectNode" />
               <item name="GVD" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GVD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GVD" type="462c0819:PsiDirectoryNode" />
+              <item name="TDT4195-StarterCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GVD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GVD" type="462c0819:PsiDirectoryNode" />
+              <item name="TDT4195-StarterCode" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -123,16 +147,18 @@
       <workItem from="1571061279059" duration="716000" />
       <workItem from="1571135863153" duration="1732000" />
       <workItem from="1571138652824" duration="428000" />
+      <workItem from="1571180942728" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2878000" />
+    <option name="totallyTimeSpent" value="2897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="827" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -159,22 +185,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.py" />
     <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/Main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/Main.py" />
     <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2ab.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -185,15 +200,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/Main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/Main.py" />
     <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding>
             <element signature="e#48#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TDT4195-StarterCode/assignment1/task2c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
