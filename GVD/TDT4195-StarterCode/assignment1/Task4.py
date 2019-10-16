@@ -13,7 +13,7 @@ class FullyConnectedModel(torch.nn.Module):
     def __init__(self):
         super().__init__()
         # We are using 28x28 greyscale images.
-        num_input_nodes = 28*28
+        num_input_nodes = 28 * 28
         # Number of classes in the MNIST dataset
         num_classes = 10
 
@@ -24,7 +24,7 @@ class FullyConnectedModel(torch.nn.Module):
 
     def forward(self, x):
         # Runs a forward pass on the images
-        x = x.view(-1, 28*28)
+        x = x.view(-1, 28 * 28)
         out = self.classifier(x)
         return out
 
@@ -36,7 +36,6 @@ batch_size = 64
 learning_rate = .0192
 num_epochs = 5
 
-
 # Use CrossEntropyLoss for multi-class classification
 loss_function = torch.nn.CrossEntropyLoss()
 
@@ -46,24 +45,50 @@ model = FullyConnectedModel()
 # Define optimizer (Stochastic Gradient Descent)
 optimizer = torch.optim.SGD(model.parameters(),
                             lr=learning_rate)
+# Weight
+weight = next(model.classifier.children()).weight.data
+print(len(weight[0]))
+
+
+import numpy as np
+
+for i in range(len(weight)):
+    fig, ax = plt.subplots()
+
+    im = ax.imshow(np.reshape(weight[i], (28, 28)), cmap='gray')
+
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
+             rotation_mode="anchor")
+    ax.set_xticks(np.arange(28))
+    ax.set_yticks(np.arange(28))
+    ax.set_xticklabels(range(28))
+    ax.set_yticklabels(range(28))
+    ax.set_title("weight "+str(i))
+    fig.tight_layout()
+    plt.savefig("Weight" + str(i) + ".png")
+    plt.show()
+
+
+
 image_transform = torchvision.transforms.Compose([
-  torchvision.transforms.ToTensor()
+    torchvision.transforms.ToTensor(),
+    torchvision.transforms.Normalize((0.5,), (0.25,)),
 ])
+
 dataloader_train, dataloader_val = dataloaders.load_dataset(batch_size, image_transform=image_transform)
 
-
 trainer = Trainer(
-  model=model,
-  dataloader_train=dataloader_train,
-  dataloader_val=dataloader_val,
-  batch_size=batch_size,
-  loss_function=loss_function,
-  optimizer=optimizer
+    model=model,
+    dataloader_train=dataloader_train,
+    dataloader_val=dataloader_val,
+    batch_size=batch_size,
+    loss_function=loss_function,
+    optimizer=optimizer,
 )
 train_loss_dict, val_loss_dict = trainer.train(num_epochs)
 
-
 # Plot loss
+
 utils.plot_loss(train_loss_dict, label="Train Loss")
 utils.plot_loss(val_loss_dict, label="Test Loss")
 plt.ylim([0, 1])
