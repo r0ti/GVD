@@ -43,7 +43,6 @@ def convolve_im(im, kernel):
                 for n in range(kW):
                     sum = sum + kernel[m][n] * im[i - h + m][j - w + n]
             newIm[i][j] = sum
-
     return newIm.astype(np.uint8)
 
 
