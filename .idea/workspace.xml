@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3da903d-ef35-4273-a252-c198a80c2104" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Task4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight1.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight3.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight4.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight5.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight6.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight7.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight8.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight9.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/Weight9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/saved_model.torch" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/saved_model.torch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/training_loss.png" beforeDir="false" afterPath="$PROJECT_DIR$/GVD/TDT4195-StarterCode/assignment1/training_loss.png" afterDir="false" />
-    </list>
+    <list default="true" id="b3da903d-ef35-4273-a252-c198a80c2104" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +136,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1571269951514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Task 4b done">
+      <created>1571330777387</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1571330777387</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
