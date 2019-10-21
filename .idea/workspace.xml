@@ -15,11 +15,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="826" />
-  </component>
   <component name="ProjectId" id="1SGILpqlzT769qv9uUQNmgLP3ep" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -129,6 +124,7 @@
       <workItem from="1571183231711" duration="179000" />
       <workItem from="1571183458293" duration="542000" />
       <workItem from="1571184166323" duration="49000" />
+      <workItem from="1571380673435" duration="183000" />
     </task>
     <task id="LOCAL−00001" summary="Task 4b done">
       <created>1571269951514</created>
