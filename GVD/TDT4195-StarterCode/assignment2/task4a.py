@@ -23,18 +23,32 @@ def convolve_im(im: np.array,
         im: np.array of shape [H, W]
     """
     ### START YOUR CODE HERE ### (You can change anything inside this block)
-    conv_result = im
+    #conv_result = im
+    fft_pic = np.fft.fft2(im)
+    fft_shift_pic = np.fft.fftshift(fft_pic)
+    fft_shift_kern = np.fft.fftshift(fft_kernel)
+    conv_result = np.abs(np.fft.ifft2(fft_shift_pic*fft_shift_kern))
+
+
+
     if verbose:
         # Use plt.subplot to place two or more images beside eachother
         plt.figure(figsize=(20, 4))
         # plt.subplot(num_rows, num_cols, position (1-indexed))
         plt.subplot(1, 5, 1)
         plt.imshow(im, cmap="gray")
+        plt.subplot(1, 5, 2)
+        plt.imshow(fft_shift_kern, cmap="gray")
+        plt.subplot(1, 5, 3)
+        plt.imshow(np.log(np.abs(fft_shift_pic)), cmap="gray")
+        plt.subplot(1, 5, 4)
+        plt.imshow(np.log(np.abs(fft_shift_pic*fft_shift_kern)), cmap="gray")
         plt.subplot(1, 5, 5) 
         plt.imshow(conv_result, cmap="gray")
 
     ### END YOUR CODE HERE ###
     return conv_result
+    #return conv_result
 
 
 if __name__ == "__main__":

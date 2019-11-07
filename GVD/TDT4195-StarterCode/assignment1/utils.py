@@ -45,3 +45,7 @@ def plot_loss(loss_dict, label):
     global_steps = list(loss_dict.keys())
     loss = list(loss_dict.values())
     plt.plot(global_steps, loss, label=label)
+
+
+def create_high_pass_frequency_kernel(im, radius):
+    return None

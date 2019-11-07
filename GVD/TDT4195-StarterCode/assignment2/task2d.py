@@ -78,6 +78,50 @@ def torch_image_to_numpy(image: torch.Tensor):
 ### START YOUR CODE HERE ### (You can change anything inside this block)
 # plt.subplot is a nice function to use for this task!
 indices = [5, 8, 19, 22, 34]
-plt.figure(figsize=(20, 4)) 
-### END YOUR CODE HERE ### 
+
+fig, axs = plt.subplots(2, 5)
+
+#plt.subplot(1, 5, 1)
+#plt.imshow(torch_image_to_numpy(first_conv_layer.weight[5].data))
+axs[0, 0].imshow(torch_image_to_numpy(first_conv_layer.weight[5].data))
+#plt.subplot(1, 5, 2)
+#plt.imshow(torch_image_to_numpy(first_conv_layer.weight[8].data))
+axs[0, 1].imshow(torch_image_to_numpy(first_conv_layer.weight[8].data))
+#plt.subplot(1, 5, 3)
+#plt.imshow(torch_image_to_numpy(first_conv_layer.weight[19].data))
+axs[0, 2].imshow(torch_image_to_numpy(first_conv_layer.weight[19].data))
+
+#plt.subplot(1, 5, 4)
+#plt.imshow(torch_image_to_numpy(first_conv_layer.weight[22].data))
+axs[0, 3].imshow(torch_image_to_numpy(first_conv_layer.weight[22].data))
+
+#plt.subplot(1, 5, 5)
+#plt.imshow(torch_image_to_numpy(first_conv_layer.weight[34].data))
+axs[0, 4].imshow(torch_image_to_numpy(first_conv_layer.weight[34].data))
+
+
+#plt.subplot(2, 5, 1)
+#plt.imshow(activation[0, 5].data, cmap="gray")
+axs[1, 0].imshow(activation[0, 5].data, cmap="gray")
+
+#plt.subplot(2, 5, 2)
+#plt.imshow(activation[0, 8].data, cmap="gray")
+axs[1, 1].imshow(activation[0, 8].data, cmap="gray")
+
+#plt.subplot(2, 5, 3)
+#plt.imshow(activation[0, 19].data, cmap="gray")
+axs[1, 2].imshow(activation[0, 19].data, cmap="gray")
+
+#plt.subplot(2, 5, 4)
+#plt.imshow(activation[0, 22].data, cmap="gray")
+axs[1, 3].imshow(activation[0, 22].data, cmap="gray")
+
+#plt.subplot(2, 5, 5)
+#plt.imshow(activation[0, 34].data, cmap="gray")
+axs[1, 4].imshow(activation[0, 34].data, cmap="gray")
+
+plt.figure(figsize=(20, 4))
+
+plt.show()
+### END YOUR CODE HERE ###
 

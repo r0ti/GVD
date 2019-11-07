@@ -1,4 +1,4 @@
-import skimage
+import skimage.io
 import os
 import numpy as np
 import utils
@@ -13,9 +13,10 @@ if __name__ == "__main__":
     im = utils.uint8_to_float(im)
     kernel = np.load("images/notch_filter.npy")
 
+
     ### START YOUR CODE HERE ### (You can change anything inside this block)
     im_filtered = im
-
+    im_filtered = convolve_im(im_filtered, kernel)
     ### END YOUR CODE HERE ###
 
     utils.save_im("clown_filtered.png", im_filtered)
