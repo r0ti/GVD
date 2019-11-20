@@ -2,6 +2,8 @@ import utils
 import skimage
 import skimage.morphology
 import numpy as np
+from skimage.util import img_as_bool
+from skimage import io
 
 
 def extract_boundary(im: np.ndarray) -> np.ndarray:
@@ -20,7 +22,12 @@ def extract_boundary(im: np.ndarray) -> np.ndarray:
         [1, 1, 1],
         [1, 1, 1]
     ], dtype=bool)
+
+    im = img_as_bool(im)
+
     boundary = im
+    boundary = np.bitwise_xor(boundary, skimage.morphology.erosion(boundary, structuring_element))
+
     return boundary
     ### END YOUR CODE HERE ### 
 

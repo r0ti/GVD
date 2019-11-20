@@ -16,13 +16,22 @@ def distance_transform(im: np.ndarray) -> np.ndarray:
     """
     ### START YOUR CODE HERE ### (You can change anything inside this block)
     # You can also define other helper functions
+
     assert im.dtype == np.bool
     structuring_element = np.array([
         [1, 1, 1],
         [1, 1, 1],
         [1, 1, 1]
     ], dtype=bool)
+    print(im.shape[0])
+
+    #im = remove_noise(im[0])
+    for i in range(im.shape[0]):
+        result = skimage.morphology.erosion(im, structuring_element)
+
+    #result = skimage.morphology.erosion(im, structuring_element)
     result = im.astype(np.int32)
+
     return result
     ### END YOUR CODE HERE ### 
 

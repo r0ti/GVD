@@ -2,6 +2,9 @@ import utils
 import skimage
 import skimage.morphology
 import numpy as np
+from skimage import io
+from skimage.util import img_as_bool
+
 
 
 def fill_holes(im: np.ndarray, starting_points: list, num_iterations: int) -> np.ndarray:
@@ -25,7 +28,17 @@ def fill_holes(im: np.ndarray, starting_points: list, num_iterations: int) -> np
         [1, 1, 1],
         [1, 1, 1]
     ], dtype=bool)
-    result = im.copy()
+
+
+    for row, col in starting_points:
+        X1 = [row, col]
+        print(X1)
+        for k in range(30):
+            X = np.bitwise_xor(skimage.morphology.binary_dilation(X1, structuring_element), (im-255))
+
+    im1 = np.bitwise_and(X, im)
+
+    result = im1.copy()
     return result
     ### END YOUR CODE HERE ### 
 
