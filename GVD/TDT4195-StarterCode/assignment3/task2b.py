@@ -1,6 +1,6 @@
 import utils
 import numpy as np
-
+from skimage import io
 
 def region_growing(im: np.ndarray, seed_points: list, T: int) -> np.ndarray:
     """
@@ -17,13 +17,49 @@ def region_growing(im: np.ndarray, seed_points: list, T: int) -> np.ndarray:
         return:
             (np.ndarray) of shape (H, W). dtype=np.bool
     """
+
     ### START YOUR CODE HERE ### (You can change anything inside this block)
-    # You can also define other helper functions
+
+    def h_crit(cand_px, seed_px):
+        seed_intensity = im[seed_px[0]][seed_px[1]]
+        cand_intensity = im[cand_px[0]][cand_px[1]]
+
+        if abs(seed_intensity - cand_intensity) < 50:
+            segmented[cand_px[0]][cand_px[1]] = True
+            add_candidates(cand_px)
+
+    def add_candidates(input_px):
+        n = [input_px[0], input_px[1] - 1]
+        nw = [input_px[0] - 1, input_px[1] - 1]
+        ne = [input_px[0] + 1, input_px[1] - 1]
+        s = [input_px[0], input_px[1] + 1]
+        sw = [input_px[0] - 1, input_px[1] + 1]
+        se = [input_px[0] + 1, input_px[1] + 1]
+        w = [input_px[0] - 1, input_px[1]]
+        e = [input_px[0] + 1, input_px[1]]
+        neighbours = [n, nw, ne, s, sw, se, w, e]
+
+        for n in neighbours:
+            if n not in checked:
+                candidates.append(n)
+                checked.append(n)
+
+    candidates = []
+    checked = []
+
     segmented = np.zeros_like(im).astype(bool)
+
+    # iterate over seed points
     for row, col in seed_points:
+        checked.append([row, col])
         segmented[row, col] = True
+        add_candidates([row, col])
+
+        for c in candidates:
+            h_crit(c, [row, col])
+
     return segmented
-    ### END YOUR CODE HERE ### 
+    ### END YOUR CODE HERE ###
 
 
 

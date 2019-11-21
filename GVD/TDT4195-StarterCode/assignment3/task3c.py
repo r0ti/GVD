@@ -26,7 +26,8 @@ def extract_boundary(im: np.ndarray) -> np.ndarray:
     im = img_as_bool(im)
 
     boundary = im
-    boundary = np.bitwise_xor(boundary, skimage.morphology.erosion(boundary, structuring_element))
+    boundary = np.bitwise_xor(im, skimage.morphology.erosion(boundary, structuring_element))
+
 
     return boundary
     ### END YOUR CODE HERE ### 

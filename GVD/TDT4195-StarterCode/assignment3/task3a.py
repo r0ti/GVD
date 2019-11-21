@@ -20,7 +20,7 @@ def remove_noise(im: np.ndarray) -> np.ndarray:
     im = img_as_bool(im)
     selem = skimage.morphology.disk(8)
     closedim = skimage.morphology.closing(im, selem)
-    im = skimage.morphology.erosion(closedim, selem)
+    im = skimage.morphology.opening(closedim, selem)
 
     return im
     ### END YOUR CODE HERE ### 

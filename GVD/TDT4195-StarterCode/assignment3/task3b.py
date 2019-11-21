@@ -23,14 +23,14 @@ def distance_transform(im: np.ndarray) -> np.ndarray:
         [1, 1, 1],
         [1, 1, 1]
     ], dtype=bool)
-    print(im.shape[0])
 
-    #im = remove_noise(im[0])
-    for i in range(im.shape[0]):
-        result = skimage.morphology.erosion(im, structuring_element)
-
-    #result = skimage.morphology.erosion(im, structuring_element)
     result = im.astype(np.int32)
+
+    while np.any(im):
+
+        im = skimage.morphology.erosion(im, structuring_element)
+        result += im
+
 
     return result
     ### END YOUR CODE HERE ### 

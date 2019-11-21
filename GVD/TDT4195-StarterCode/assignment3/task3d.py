@@ -29,14 +29,15 @@ def fill_holes(im: np.ndarray, starting_points: list, num_iterations: int) -> np
         [1, 1, 1]
     ], dtype=bool)
 
-
+    X0 = np.zeros(im.shape)
+    X1 = np.zeros(im.shape)
     for row, col in starting_points:
-        X1 = [row, col]
-        print(X1)
-        for k in range(30):
-            X = np.bitwise_xor(skimage.morphology.binary_dilation(X1, structuring_element), (im-255))
+        X0[row, col] = 1
+    for k in range(num_iterations):
+        X1 = np.bitwise_and(skimage.morphology.binary_dilation(X0, structuring_element), (np.invert(im)))
+        X0 = X1.copy()
 
-    im1 = np.bitwise_and(X, im)
+    im1 = np.bitwise_or(X1, im)
 
     result = im1.copy()
     return result
